@@ -1,6 +1,6 @@
 class Fraccion
 attr_accessor :numerador, :denominador
-	include Comparable
+
 	#inizializador de fracciones
 	def initialize(num, den)
         	@numerador, @denominador = num, den
