@@ -17,7 +17,7 @@ describe "funcion_fraccion" do
 
 	end
 
-	it "La fracción debe estar reducida a su mínima expresión" do
+	it "La fraccion debe estar reducida a su minima expresion" do
 		@a.forma_reducida == :forma_reducida
 	end
 
