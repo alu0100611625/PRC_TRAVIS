@@ -7,12 +7,12 @@ attr_accessor :numerador, :denominador
     	end
 
 
-	def mostrar_fraccion
-		puts "#{@numerador} / #{@denominador}"
+	def to_s
+		"#{@numerador} / #{@denominador}"
 	end
 
-	def mostrar_flotante
-                puts @numerador.to_f / @denominador.to_f
+	def to_f
+                @numerador.to_f / @denominador.to_f
         end
 
 	def forma_reducida
@@ -95,7 +95,11 @@ end
 	end
 	
 	def <=>(other)
-         self.num.to_f / self.denom <=> other.num.to_f / other.denom
+	unless other.instance_of? Fraccion
+	raise NoTypeError, "No es el mismo Tipo" 
+        else
+	self.num.to_f / self.denom <=> other.num.to_f / other.denom
+	end
 	end
 
 

@@ -30,11 +30,11 @@ describe "funcion_fraccion" do
 	end
 
 	it "Muestre la fraccion por consola de la forma: a/b." do
-		@a.mostrar_fraccion.should
+		@a.to_s.should
 	end
 
 	it "Debe mostrar la fraccion en forma decimal" do
-		@a.mostrar_flotante.should
+		@a.to_f.should
 	end
 
 	it "Comparar si las fracciones son iguales con ==" do
@@ -92,6 +92,9 @@ describe "comparacion" do
 	it "Comprobar si una fraccion es mayor o igual" do
 		(@a >= @b).should
 	end
+	it "Comprobar si una fraccion es mayor,menor o igual" do
+		(@a <=> @b).should eq(0)
+	end  
 
 end
   describe "modificacion_clase" do 
@@ -110,8 +113,10 @@ end
            temp = 0
          end
          temp.should eq(0)
-      end  
-  end     
+      end
+   
+  end
+	
 end
  
 
